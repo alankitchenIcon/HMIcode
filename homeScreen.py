@@ -58,14 +58,14 @@ class home:
             self.is_fullscreen = False
         
         # Labels on main screen window
-        cycle_count_text = tk.Label(self.window, text="Current Cycle Count", font=(None, self.fontsize))
+        cycle_count_text = tk.Label(self.window, text="Cycle Count", font=(None, self.fontsize))
         cycle_count_text.grid(row=1, column=0)
 
         cycle_limit_text = tk.Label(self.window, text="Cycle Limit", font=(None, self.fontsize))
         cycle_limit_text.grid(row=2, column=0, pady=3)
 
         time_remaining_text = tk.Label(self.window, text="Estimated Finish", font=(None, self.fontsize))
-        time_remaining_text.grid(row=1, column=2)
+        time_remaining_text.grid(row=4, column=0)
 
         cycle_rate_text = tk.Label(self.window, text="Cycle Rate", font = (None, self.fontsize))
         cycle_rate_text.grid(row=3, column=0)
@@ -78,7 +78,7 @@ class home:
         self.cycle_count_number.grid(row=1, column=1, pady=3)
 
         self.time_remaining_number = tk.Label(self.window, text="N/A", font=(None, self.fontsize))
-        self.time_remaining_number.grid(row=1, column=3)
+        self.time_remaining_number.grid(row=4, column=1)
 
         self.cycle_rate_number = tk.Label(self.window, text=self.cycle_data.cycle_rate, font=(None, self.fontsize))
         self.cycle_rate_number.grid(row=3, column = 1)
@@ -97,16 +97,16 @@ class home:
         # emergency_stop_Button.grid(row=4, column=0, rowspan=2, ipady=10)
 
         reset_Button = tk.Button(self.window, text="Cycle Settings", command=self.__reset_settings, font=(None, self.fontsize))
-        reset_Button.grid(row=4, column=1, columnspan=1, ipadx=10, ipady=5)
+        reset_Button.grid(row=5, column=1, columnspan=1, ipadx=10, ipady=5)
 
         time_Button = tk.Button(self.window, text="Time Settings", command=self.__time_action, font=(None, self.fontsize))
-        time_Button.grid(row=4, column=2, columnspan=1, ipadx=10, ipady=5)
+        time_Button.grid(row=5, column=2, columnspan=1, ipadx=10, ipady=5)
 
         other_settings_button = tk.Button(self.window, text="Other Settings", command=self.__other_settings, font=(None, self.fontsize))
-        other_settings_button.grid(row=4, column=0, ipadx=10, ipady=5)
+        other_settings_button.grid(row=5, column=0, ipadx=10, ipady=5)
 
         set_load_button = tk.Button(self.window, text="To Set Load", command=self.__load, font=(None, self.fontsize))
-        set_load_button.grid(row=2, column=3)
+        set_load_button.grid(row=2, column=2)
 
         end_fullscreen_button = tk.Button(self.window, text="ESC", command=self.__close_fullscreen, font=(None, self.fontsize))
         end_fullscreen_button.grid(row=5, column=4)
