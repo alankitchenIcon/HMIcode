@@ -109,7 +109,7 @@ class home:
         set_load_button.grid(row=2, column=2)
 
         end_fullscreen_button = tk.Button(self.window, text="ESC", command=self.__close_fullscreen, font=(None, self.fontsize))
-        end_fullscreen_button.grid(row=5, column=4)
+        end_fullscreen_button.grid(row=5, column=3)
 
         # Full Screen Settings
         self.window.bind("<Escape>", self.__close_fullscreen)
